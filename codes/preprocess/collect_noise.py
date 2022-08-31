@@ -21,7 +21,7 @@ opt = parser.parse_args()
 
 # define input and target directories
 with open('paths.yml', 'r') as stream:
-    PATHS = yaml.load(stream)
+    PATHS = yaml.full_load(stream)
 
 
 def rgb2gray(rgb):
