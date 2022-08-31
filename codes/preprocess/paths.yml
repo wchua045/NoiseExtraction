@@ -1,13 +1,14 @@
 df2k:
   tdsr:
-    source: '../../ntire20/Corrupted-tr-x'
-    target: '../../ntire20/Corrupted-tr-y'
+    source: "../../ntire20/Corrupted-tr-x"
+    target: "../../ntire20/Corrupted-tr-y"
     valid:
 dped:
   clean:
     hr:
-      train: '../../ntire20/DPEDiphone-tr-x'
-      valid: '../../ntire20/DPEDiphone-va'
+      train: "../../ntire20/DPEDiphone-tr-x"
+      valid: "../../ntire20/DPEDiphone-va"
 datasets:
-  df2k: '../datasets/DF2K'
-  dped: '../datasets/DPED'
+  df2k: "../datasets/DF2K"
+  #dped: '../datasets/DPED'
+  dped: "../data"
