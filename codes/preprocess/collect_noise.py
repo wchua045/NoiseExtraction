@@ -9,7 +9,7 @@ import gdal
 from osgeo import gdal, ogr
 
 parser = argparse.ArgumentParser(description='create a dataset')
-parser.add_argument('--dataset', default='df2k', type=str,
+parser.add_argument('--dataset', default='dped', type=str,
                     help='selecting different datasets')
 parser.add_argument('--artifacts', default='', type=str,
                     help='selecting different artifacts type')
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     # 1.
     else:
         img_dir = PATHS[opt.dataset][opt.artifacts]['hr']['train']
-        noise_dir = PATHS['datasets']['dped'] + '/DPEDiphone_noise'
+        noise_dir = PATHS['datasets']['dped'] + '/noise_patches'
         # sp = 256 #size of noise patch / stride
         #max_var = 20
         #min_mean = 50

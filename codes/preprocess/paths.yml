@@ -6,7 +6,8 @@ df2k:
 dped:
   clean:
     hr:
-      train: "../../ntire20/DPEDiphone-tr-x"
+      train: "./data"
+      #train: "../../ntire20/DPEDiphone-tr-x"
       valid: "../../ntire20/DPEDiphone-va"
 datasets:
   df2k: "../datasets/DF2K"
