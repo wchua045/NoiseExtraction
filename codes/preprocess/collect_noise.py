@@ -97,7 +97,7 @@ if __name__ == '__main__':
         patchs = noise_patch(img, sp, max_var, min_mean)
         for idx, patch in enumerate(patchs):
             save_path = osp.join(
-                noise_dir, '{}_{:03}.tif'.format(img_name, idx))
+                noise_dir, '{}_{:03}.tiff'.format(img_name, idx))
             cnt += 1
             print('collect:', cnt, save_path)
-            Image.fromarray(patch).save(save_path)
+            Image.fromarray(patch, mode='F').save(save_path)
