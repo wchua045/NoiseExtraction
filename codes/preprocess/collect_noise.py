@@ -38,6 +38,7 @@ def noise_patch(rgb_img, sp, max_var, min_mean):
     img = np.array(img)
 
     w, h = img.shape
+    print("Grayscale image shape: ")
     collect_patchs = []
 
     for i in range(0, w - sp, sp):
@@ -97,7 +98,10 @@ if __name__ == '__main__':
         patchs = noise_patch(img, sp, max_var, min_mean)
         for idx, patch in enumerate(patchs):
             save_path = osp.join(
-                noise_dir, '{}_{:03}.tiff'.format(img_name, idx))
+                noise_dir, '{}_{:03}.png'.format(img_name, idx))
             cnt += 1
             print('collect:', cnt, save_path)
-            Image.fromarray(patch, mode='F').save(save_path)
+            #print('patch original: ', patch)
+            patch_int = (patch * 255).astype(np.uint8)
+            #print('patch_int:', patch_int)
+            Image.fromarray(patch_int).save(save_path)
