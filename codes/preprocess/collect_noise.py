@@ -38,7 +38,6 @@ def noise_patch(rgb_img, sp, max_var, min_mean):
     img = np.array(img)
 
     w, h = img.shape
-    print("Grayscale image shape: ")
     collect_patchs = []
 
     for i in range(0, w - sp, sp):
